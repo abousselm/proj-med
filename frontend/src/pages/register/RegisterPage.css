@@ -1,0 +1,38 @@
+.registerLayout{
+  display: grid;
+  place-items: center;
+  padding-top: 18px;
+}
+
+.registerCard{
+  width: 100%;
+  max-width: 540px;
+}
+
+.registerCard::after{ animation-duration: 9.2s; }
+
+.hintList{
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.hint{
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.dot{
+  margin-top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(16,185,129,.25);
+  border: 1px solid rgba(16,185,129,.35);
+}
+

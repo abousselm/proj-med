@@ -1,0 +1,1 @@
+function u({baseUrl:o,onDoctorToday:e,onPatientAppointment:c}){return new Promise(t=>{try{new Function("return import(modName);")().then(r=>{const{io:i}=r,n=i(o,{withCredentials:!0});e&&n.on("doctor:today",e),c&&n.on("patient:appointment",c),t(n)}).catch(()=>t(null))}catch{t(null)}})}export{u as createSocketClient};

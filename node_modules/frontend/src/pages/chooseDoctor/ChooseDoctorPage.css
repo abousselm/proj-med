@@ -1,0 +1,125 @@
+.chooseDoctorLayout{padding:0;}
+
+.chooseDoctorCard .pageInner{padding:22px;}
+
+.chooseHeader{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:14px;}
+.chooseTitle{margin-bottom:6px;}
+
+.controls{display:grid;grid-template-columns:1fr;gap:12px;margin:14px 0 10px;}
+
+.searchWrap{position:relative;}
+.searchIcon{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:.8;}
+.searchInput{
+  width:100%;
+  border-radius:16px;
+  border:1px solid rgba(5,150,105,.20);
+  background:rgba(255,255,255,.72);
+  padding:12px 14px 12px 40px;
+  outline:none;
+  color:var(--text);
+  transition:box-shadow .2s var(--ease-out), border-color .2s var(--ease-out), transform .2s var(--ease-out);
+}
+.searchInput:focus{border-color:rgba(16,185,129,.55);box-shadow:0 0 0 6px var(--ring);}
+
+.sortWrap{display:flex;flex-direction:column;gap:8px;}
+.sortLabel{font-size:13px;color:rgba(8,59,46,.9);font-weight:700;}
+.sortSelect{
+  width:100%;
+  border-radius:16px;
+  border:1px solid rgba(5,150,105,.20);
+  background:rgba(255,255,255,.72);
+  padding:12px 12px;
+  outline:none;
+  color:var(--text);
+}
+
+.chipsRow{display:flex;flex-wrap:wrap;gap:10px;margin:8px 0 16px;}
+.chip{
+  border-radius:999px;
+  border:1px solid rgba(5,150,105,.25);
+  background:rgba(255,255,255,.55);
+  padding:10px 12px;
+  font-weight:800;
+  font-size:13px;
+  color:rgba(8,59,46,.92);
+  transition:transform .18s var(--ease-out), background .18s var(--ease-out), border-color .18s var(--ease-out);
+}
+.chip:hover{transform:translateY(-1px);background:rgba(255,255,255,.85);border-color:rgba(16,185,129,.35);}
+.chipActive{background:linear-gradient(135deg, rgba(16,185,129,1) 0%, rgba(5,150,105,1) 100%);color:#fff;border-color:rgba(16,185,129,.55);}
+
+.loadingArea{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:30px 0;}
+.spinner{width:40px;height:40px;border-radius:50%;border:4px solid rgba(16,185,129,.20);border-top-color:rgba(16,185,129,1);animation:spin .9s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loadingText{margin:0;color:var(--muted);font-weight:700;font-size:14px;}
+
+.emptyState{padding:34px 14px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;}
+.emptyIcon{font-size:34px;}
+.emptyTitle{margin:0;font-size:16px;}
+.emptyText{margin:0;color:var(--muted);}
+
+.grid{display:grid;gap:14px;}
+.doctorsGrid{grid-template-columns:1fr;}
+
+.fadeIn{animation:fadeIn .3s var(--ease-out) both;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px) scale(.99)}to{opacity:1;transform:translateY(0) scale(1)}}
+
+.doctorCard{
+  width:100%;
+  text-align:left;
+  padding:14px;
+  border-radius:18px;
+  border:1px solid rgba(5,150,105,.15);
+  background:rgba(255,255,255,.80);
+  box-shadow:0 18px 40px rgba(0,0,0,.06);
+  cursor:pointer;
+  transition:transform .18s var(--ease-out), box-shadow .18s var(--ease-out), border-color .18s var(--ease-out);
+}
+.doctorCard:hover{transform:translateY(-2px) scale(1.01);box-shadow:0 22px 55px rgba(0,0,0,.10);border-color:rgba(16,185,129,.32);}
+
+.doctorTop{display:flex;gap:12px;align-items:flex-start;}
+.avatarWrap{flex:0 0 auto;}
+.avatar{width:52px;height:52px;border-radius:50%;border:1.5px solid rgba(16,185,129,.45);object-fit:cover;transition:transform .2s var(--ease-out);}
+.doctorCard:hover .avatar{transform:scale(1.07);}
+.avatarFallback{width:52px;height:52px;border-radius:50%;border:1.5px solid rgba(16,185,129,.45);background:rgba(16,185,129,.10);display:grid;place-items:center;font-weight:900;color:rgba(5,150,105,.95);}
+.avatarFallback span{font-size:14px;}
+
+.doctorMeta{min-width:0;}
+.doctorName{margin:0;font-size:15px;line-height:1.25;letter-spacing:-.2px;}
+.doctorSpec{margin-top:6px;font-size:13px;font-weight:800;color:rgba(5,150,105,.95);}
+.doctorAddr{margin-top:6px;font-size:13px;color:rgba(8,59,46,.85);}
+
+.doctorMid{display:flex;flex-direction:column;gap:10px;margin-top:12px;}
+.rating{display:flex;flex-direction:column;gap:4px;}
+.stars{font-size:13px;letter-spacing:1px;line-height:1;}
+.star{color:rgba(5,150,105,.25)}
+.star.full{color:rgba(16,185,129,1)}
+.star.half{color:rgba(16,185,129,.7)}
+.ratingMeta{font-size:12px;color:var(--muted);font-weight:800;}
+.ratingPlaceholder{font-size:13px;color:rgba(43,107,90,.7);font-weight:800;}
+
+.availabilityBadge{display:inline-flex;align-items:center;justify-content:center;padding:8px 10px;border-radius:999px;font-weight:900;font-size:12.5px;border:1px solid rgba(0,0,0,.05)}
+.badgeGreen{background:rgba(16,185,129,.12);border-color:rgba(16,185,129,.35);color:rgba(4,120,87,1)}
+.badgeGray{background:rgba(148,163,184,.18);border-color:rgba(148,163,184,.35);color:rgba(51,65,85,1)}
+
+.doctorBottom{display:flex;align-items:center;justify-content:space-between;margin-top:14px;gap:10px;}
+.bookHint{font-weight:900;color:rgba(5,150,105,.98)}
+.bookCta{font-weight:900;color:rgba(5,150,105,.98)}
+
+.specialtyGroups{display:flex;flex-direction:column;gap:16px;}
+.specialtyGroup{margin-top:6px;}
+
+.specialtyHeader{display:flex;align-items:center;gap:10px;padding:12px 12px;border-radius:16px;background:rgba(16,185,129,.10);border:1px solid rgba(16,185,129,.22);}
+.specialtyHeaderText{font-weight:1000;color:rgba(4,120,87,1)}
+.specialtyHeaderIcon{opacity:.95;}
+.stickyHeader{position:sticky;top:12px;z-index:3;}
+
+@media (min-width: 680px){
+  .controls{grid-template-columns:1.2fr .8fr;align-items:end;}
+  .doctorsGrid{grid-template-columns:repeat(2,1fr);}
+}
+
+@media (min-width: 980px){
+  .doctorsGrid{grid-template-columns:repeat(3,1fr);}
+}
+
+

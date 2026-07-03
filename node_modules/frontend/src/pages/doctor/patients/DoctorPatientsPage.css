@@ -1,0 +1,168 @@
+.ppLayout{
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.ppInner{padding: 22px;}
+
+.ppHeader{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:18px;}
+
+.ppToolbar{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;flex-wrap:wrap;margin: 12px 0 14px;}
+
+.ppField{display:flex;flex-direction:column;gap:8px;min-width: 260px;}
+.ppFieldLabel{font-size: 12px;opacity:.8;letter-spacing:.02em;}
+
+.ppInput,.ppSelect{
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.12);
+  color: var(--text, #e8eefc);
+  padding: 0 12px;
+  outline: none;
+}
+
+.ppSort{display:flex;gap:12px;align-items:flex-end;flex-wrap:wrap;}
+
+.ppList{
+  display:flex;
+  flex-direction:column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.ppListItem{
+  width:100%;
+  text-align:left;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.10);
+  border-radius: 16px;
+  padding: 14px;
+  cursor:pointer;
+  color: inherit;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: 14px;
+  transition: transform .12s ease, border-color .12s ease, background .12s ease;
+}
+.ppListItem:hover{transform: translateY(-1px); border-color: rgba(56,189,248,.35); background: rgba(0,0,0,.16);} 
+
+.ppListLeft{display:flex;align-items:center;gap: 12px;min-width: 280px;}
+
+.ppAvatar{width:44px;height:44px;border-radius: 14px;overflow:hidden;display:flex;align-items:center;justify-content:center;background: rgba(56,189,248,.12);border: 1px solid rgba(56,189,248,.25)}
+.ppAvatar img{width:100%;height:100%;object-fit: cover;}
+.ppAvatarFallback{font-weight:700;letter-spacing:.02em;}
+
+.ppPatientName{font-weight: 750;}
+.ppPatientMeta{opacity:.8;font-size: 13px;margin-top: 2px;}
+
+.ppListMid{display:flex;gap: 22px;align-items:flex-start;}
+.ppStatLabel{font-size: 12px;opacity:.75;}
+.ppStatValue{font-weight: 700; margin-top: 2px;}
+
+.ppListRight{display:flex;align-items:center;gap: 14px;}
+.ppVisitsLabel{font-size: 12px;opacity:.75;}
+.ppVisitsValue{font-weight: 800;}
+.ppChevron{opacity:.65;font-size: 20px;}
+
+.ppModalOverlay{position:fixed;inset:0;background: rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;padding: 20px;z-index: 90;}
+.ppModal{width: 980px;max-width: 100%;border-radius: 18px;background: rgba(12,14,20,.98);border: 1px solid rgba(255,255,255,.12);box-shadow: 0 20px 70px rgba(0,0,0,.55);overflow:hidden;}
+.ppModalHeader{display:flex;justify-content:space-between;align-items:center;padding: 16px 18px;border-bottom: 1px solid rgba(255,255,255,.08);}
+.ppModalTitle{font-weight: 850;}
+.ppModalClose{background: transparent;border: 0;color: inherit;cursor:pointer;font-size: 18px;opacity:.85;}
+.ppModalBody{padding: 18px;max-height: 75vh;overflow:auto;}
+
+.ppModalLoading{padding: 30px;}
+
+.ppPatientModalGrid{display:flex;flex-direction:column;gap: 16px;}
+
+.ppPMHeader{display:flex;gap: 16px;align-items:flex-start;}
+.ppPMAvatarWrap{flex: 0 0 auto;}
+.ppPMName{font-size: 18px;font-weight: 900;}
+
+.ppPMRow{display:flex;justify-content:space-between;gap: 20px;align-items:center;margin-top: 8px;}
+.ppPMKey{opacity:.75;font-size: 13px;}
+.ppPMVal{font-weight: 800;}
+
+.ppPMSection{border: 1px solid rgba(255,255,255,.10);background: rgba(255,255,255,.03);border-radius: 16px;padding: 14px;}
+.ppPMSectionTitle{font-weight: 850;margin-bottom: 10px;}
+
+.ppPMKV{display:flex;flex-direction:column;gap: 10px;}
+.kvLine{display:flex;justify-content:space-between;gap: 16px;}
+.k{opacity:.75;font-size: 13px;}
+.v{font-weight: 800;}
+
+.ppPMSectionTitle{font-weight: 850;}
+
+.ppNotesArea{
+  width:100%;
+  margin-top: 6px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.12);
+  color: inherit;
+  padding: 12px;
+  outline: none;
+  resize: vertical;
+}
+
+.ppNotesFooter{display:flex;justify-content:flex-start;gap: 14px;margin-top: 10px;align-items:center;}
+.ppSaving{opacity:.85;font-size: 13px;}
+.ppSavedAt{opacity:.65;font-size: 12px;}
+.ppNotesHint{opacity:.65;font-size: 12px;margin-top: -4px;}
+
+.ppPMNotesHint{opacity:.65;font-size: 12px;margin-top: -4px;}
+.ppInlineLoading{opacity:.8;}
+.ppInlineNote{opacity:.7;}
+.ppInlineEmpty{opacity:.7;}
+.ppHistoryList{display:flex;flex-direction:column;gap: 10px;}
+.ppHistoryItem{display:flex;justify-content:space-between;gap: 16px;align-items:center;padding: 10px 12px;border-radius: 14px;border: 1px solid rgba(255,255,255,.08);background: rgba(0,0,0,.10);}
+.ppHistoryWhen{opacity:.85;font-weight: 700;}
+.ppHistoryStatus{display:flex;align-items:center;justify-content:flex-end;}
+
+.ppStatus{padding: 6px 10px;border-radius: 999px;font-weight: 800;font-size: 12px;}
+.ppHistoryNote{margin-top: 10px;opacity:.6;font-size: 12px;}
+
+.ppStatus{
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 850;
+  font-size: 12px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.10);
+}
+
+/* match existing statuses style subtly */
+.ppStatus:global(.bWaiting){background: rgba(56,189,248,.12);border-color: rgba(56,189,248,.25);} 
+
+.ppStatus:global(.bDone){background: rgba(16,185,129,.12);border-color: rgba(16,185,129,.25);} 
+
+.ppStatus:global(.bCancelled){background: rgba(148,163,184,.12);border-color: rgba(148,163,184,.25);} 
+
+.ppStatus:global(.bNeutral){background: rgba(255,255,255,.06);border-color: rgba(255,255,255,.10);} 
+
+.ppStatus{background: rgba(56,189,248,.10); border-color: rgba(56,189,248,.22);} 
+
+.ppStatus::after{content:'';}
+
+.ppInlineLoading{padding: 8px 0;}
+
+.delayGood{color: #10b981;}
+
+.error{color: #fb7185; margin: 10px 0;}
+
+/* Fallback empty state */
+.emptyState{padding: 22px; text-align:center; opacity:.9;}
+.emptyIcon{font-size: 34px;}
+.emptyTitle{font-weight: 900; margin-top: 6px;}
+.emptySub{opacity:.7; margin-top: 6px;}
+
+.ppLoading{padding: 40px 20px; opacity:.85;}
+
+.btnPrimary{height: 40px;}
+
+/* Provide status colors from StatusBadge usage */
+.ppStatus{background: rgba(255,255,255,.06);border-color: rgba(255,255,255,.10);} 
+
+

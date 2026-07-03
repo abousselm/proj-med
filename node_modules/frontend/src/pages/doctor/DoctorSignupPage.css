@@ -1,0 +1,312 @@
+:root {
+  --primary: #24b6a7;
+  --primary2: #4fd1c5;
+  --bgSoft: #f3fbfa;
+  --card: #ffffff;
+  --text: #0f172a;
+}
+
+.doctorSignupLayout {
+  min-height: calc(100vh - 80px);
+}
+
+.doctorSignupCard {
+  background: var(--card);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(2, 132, 199, 0.08);
+}
+
+.doctorHeader {
+  margin-bottom: 16px;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 8px 0 16px;
+}
+
+.stepCircle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border: 2px solid #cfe7e3;
+  color: #6b7280;
+  background: #fff;
+}
+
+.stepCircle.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.stepCircle.done {
+  background: #16a34a;
+  border-color: #16a34a;
+  color: #fff;
+  font-size: 14px;
+}
+
+.stepLine {
+  flex: 1;
+  height: 2px;
+  background: #cfe7e3;
+}
+
+.form {
+  width: 100%;
+}
+
+.step {
+  width: 100%;
+}
+
+.stepSlideIn {
+  animation: slideIn 220ms ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .grid2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.input,
+.textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #d9e7e4;
+  padding: 12px 12px;
+  background: #fff;
+  outline: none;
+  color: var(--text);
+  transition: border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: rgba(36, 182, 167, 0.9);
+  box-shadow: 0 0 0 4px rgba(36, 182, 167, 0.12);
+}
+
+.fieldError {
+  margin-top: 8px;
+  color: #e11d48;
+  font-size: 13px;
+}
+
+.actionsRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.btn {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btnSecondary {
+  background: #fff;
+  border: 1px solid #bde7e0;
+  color: var(--primary);
+  font-weight: 700;
+  padding: 12px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.pwMeter {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #f1f5f9;
+  color: #0f172a;
+  font-size: 13px;
+}
+
+.pwMeter.red {
+  background: rgba(225, 29, 72, 0.08);
+  color: #be123c;
+}
+
+.pwMeter.orange {
+  background: rgba(245, 158, 11, 0.12);
+  color: #b45309;
+}
+
+.pwMeter.green {
+  background: rgba(34, 197, 94, 0.10);
+  color: #15803d;
+}
+
+.checkboxRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.checkChip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid #d9e7e4;
+  background: #fff;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkChipOn {
+  border-color: rgba(36, 182, 167, 0.9);
+  background: rgba(36, 182, 167, 0.08);
+}
+
+.workHours {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.workDay {
+  border: 1px solid #d9e7e4;
+  border-radius: 14px;
+  padding: 12px;
+  background: #fff;
+}
+
+.workDayOn {
+  border-color: rgba(36, 182, 167, 0.75);
+  box-shadow: 0 0 0 4px rgba(36, 182, 167, 0.08);
+}
+
+.workTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggleLine {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.workControls {
+  margin-top: 10px;
+}
+
+.miniLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.uploadSection {
+  margin: 12px 0;
+}
+
+.uploadLeft {
+  display: grid;
+  gap: 12px;
+}
+
+.fileInput {
+  width: 100%;
+}
+
+.avatarPreview {
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 12px;
+  border: 2px dashed #bde7e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fffe;
+}
+
+.avatarPreview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatarFallback {
+  font-size: 28px;
+  opacity: 0.8;
+}
+
+.serverError {
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(225, 29, 72, 0.08);
+  color: #be123c;
+}
+
+.serverSuccess {
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(34, 197, 94, 0.10);
+  color: #15803d;
+}
+

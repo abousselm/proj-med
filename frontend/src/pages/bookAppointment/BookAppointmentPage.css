@@ -1,0 +1,29 @@
+.bookLayout{padding:0;}
+.bookCard .pageInner{padding:22px;}
+
+.bookGrid{display:grid;grid-template-columns:1fr;gap:14px;}
+.bookPanel{display:flex;flex-direction:column;gap:14px;}
+
+.pill{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:10px 12px;background:rgba(255,255,255,.60);border:1px solid rgba(5,150,105,.18);font-weight:900;color:rgba(5,150,105,.95);}
+
+.field{display:flex;flex-direction:column;gap:8px;}
+.label{font-size:13px;color:rgba(8,59,46,.9);font-weight:700;}
+
+.dateRow{display:flex;flex-wrap:wrap;gap:10px;}
+.dateChip{border-radius:999px;padding:10px 12px;border:1px solid rgba(5,150,105,.22);background:rgba(255,255,255,.60);font-weight:900;font-size:13px;color:rgba(8,59,46,.9);}
+.dateChipActive{background:linear-gradient(135deg, rgba(16,185,129,1) 0%, rgba(5,150,105,1) 100%);color:#fff;border-color:rgba(16,185,129,.55);}
+
+.slotsLoading{padding:12px 0;color:var(--muted);font-weight:800;}
+.slotsEmpty{padding:12px 0;color:var(--muted);font-weight:800;}
+
+.slotsGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
+.slotChip{padding:10px 10px;border-radius:14px;border:1px solid rgba(5,150,105,.18);background:rgba(255,255,255,.65);font-weight:900;color:rgba(8,59,46,.9);cursor:pointer;transition:transform .18s var(--ease-out), background .18s var(--ease-out), border-color .18s var(--ease-out);}
+.slotChip:hover{transform:translateY(-1px);}
+.slotActive{border-color:rgba(16,185,129,.45);box-shadow:0 0 0 6px rgba(16,185,129,.18);background:rgba(16,185,129,.10);}
+.slotDisabled{opacity:.45;cursor:not-allowed;}
+
+.bookBtn{width:100%;}
+
+.btnSecondary{cursor:pointer;padding:12px 14px;border-radius:14px;border:1px solid rgba(5,150,105,.20);background:rgba(255,255,255,.65);color:rgba(5,150,105,.95);font-weight:900;transition:transform .18s var(--ease-out), background .18s var(--ease-out);}
+.btnSecondary:hover{transform:translateY(-1px);background:rgba(255,255,255,.85);}
+
